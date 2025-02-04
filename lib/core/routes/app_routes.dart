@@ -12,12 +12,12 @@ abstract class AppRouter {
   static final router = GoRouter(
     routes: [
       GoRoute(
-        path: "/",
+        path: kMyCartView,
         builder: (context, state) => const MycartView(),
       ),
       GoRoute(
         path: kPaymentDetailsView,
-        builder: (context, state) => const PaymentDetailsView(),
+        builder: (context, state) =>  PaymentDetailsView(),
       ),
       GoRoute(
         path: kPaymentDoneView,

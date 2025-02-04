@@ -1,7 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:payment/Features/payment_done/presentation/view/widget/details_item_row.dart';
+import 'package:payment/Features/payment_done/presentation/view/widget/done_Icon_widget.dart';
+import 'package:payment/Features/payment_done/presentation/view/widget/thanks_body.dart';
 import 'package:payment/core/routes/app_routes.dart';
+import 'package:payment/core/theme/app_theme.dart';
+import 'package:payment/core/widget/text_utils.dart';
+import 'package:sizer/sizer.dart';
 
 class PaymentDoneView extends StatelessWidget {
   const PaymentDoneView({super.key});
@@ -12,24 +18,9 @@ class PaymentDoneView extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text("PaymentDone"),
+        leading: Container(),
       ),
-      body: Center(
-        child: InkWell(
-          onTap: () {
-            GoRouter.of(context).push(AppRouter.kMyCartView);
-          },
-          child: Container(
-            alignment: Alignment.center,
-            child: Text(
-              "Go To My Cart View",
-              style: TextStyle(color: Colors.white),
-            ),
-            color: Colors.green,
-            width: 200,
-            height: 70,
-          ),
-        ),
-      ),
+      body: thanksBodyWidget(context),
     );
   }
 }

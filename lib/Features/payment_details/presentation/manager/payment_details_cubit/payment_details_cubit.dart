@@ -5,4 +5,6 @@ part 'payment_details_state.dart';
 
 class PaymentDetailsCubit extends Cubit<PaymentDetailsState> {
   PaymentDetailsCubit() : super(PaymentDetailsInitial());
+
+
 }
