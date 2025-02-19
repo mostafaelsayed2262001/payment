@@ -11,6 +11,7 @@ import 'package:sizer/sizer.dart';
 Widget thanksBodyWidget(BuildContext context){
   return Container(
     width: double.infinity,
+    padding: EdgeInsets.only(bottom: 20),
     decoration: BoxDecoration(
         color: Colors.grey.shade300,
         borderRadius: BorderRadius.circular(20)),
@@ -53,7 +54,7 @@ Widget thanksBodyWidget(BuildContext context){
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/thanksitems/qrcode.png"),
+              Image.asset("assets/thanksitems/qrcode.png",),
               Spacer(),
               InkWell(
                 onTap: (){

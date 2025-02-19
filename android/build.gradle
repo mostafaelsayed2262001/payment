@@ -1,15 +1,19 @@
 buildscript {
     ext {
-        agp_version = '8.2.0'
-        agp_version1 = '8.5.0'
-        agp_version2 = '8.2.0'
-        agp_version3 = '8.5.0'
+        agp_version = '8.5.0'
     }
+}
+
+ext {
+    myValue = '8.5.0'
 }
 allprojects {
     repositories {
         google()
         mavenCentral()
+    }
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << '-Xlint:deprecation'
     }
 }
 
